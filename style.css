@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  box-sizing: border-box;
+  border: 0.1px solid rgb(46, 45, 45);
+  box-shadow: 5px 5px 5px 5px rgba(102, 102, 102, 0.767);
+  border-radius: 5px;
+  width: 400px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  overflow: auto;
+}
+.title, .addTask,
+#tasks {
+  animation: fadeIn 1.5s linear;
+}
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+  }to {
+    opacity: 1;
+  }
+}
+.container::-webkit-scrollbar {
+  width: 10px;
+}
+.container::-webkit-scrollbar-thumb {
+  background-color: darkblue;
+}
+h1 {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 5px;
+}
+.addTask {
+  padding: 15px;
+  margin-top: 8px;
+  text-align: center;
+}
+#text {
+  padding: 8px;
+  border: 1px solid rgba(128, 128, 128, 0.473);
+  border-radius: 5px;
+}
+#text:hover {
+  outline: none;
+  border: 1px solid #051094;
+}
+input[type=button] {
+  background-color: #051094;
+  border: none;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  height: 33px;
+}
+input[type=button]:hover {
+  cursor: pointer;
+  background-color: black;
+}
+#tasks {
+  margin-left: 30px;
+  margin-top: 20px;
+}
