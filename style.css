@@ -69,3 +69,6 @@ input[type=button]:hover {
   margin-left: 30px;
   margin-top: 20px;
 }
+.tasksContent {
+  margin-bottom: 8px;
+}
