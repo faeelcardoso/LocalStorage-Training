@@ -8,7 +8,7 @@ onload = () => {
   let savePage = "";
 
   for(data of datas) {
-    savePage += `<div class='tasksContent' id='${data.id}'>${data.taskName} <input type='button' value='Delete' class='deleteTask' onclick='deleteTask(this)'> </div>`;
+    savePage += `<div class='tasksContent' data-id='${data.id}'>${data.taskName} <input type='button' value='Delete' class='deleteTask' onclick='deleteTask(this)'> </div>`;
   }
 
   // Insere no html
@@ -74,7 +74,7 @@ function cadastrar() {
   let htmlData = "";
 
   for(task of tasks) {
-    htmlData += `<div class='tasksContent' id='${task.id}'>${task.taskName} <input type='button' value='Delete' class='deleteTask' onclick='deleteTask(this)'> </div>`;
+    htmlData += `<div class='tasksContent' data-id='${task.id}'>${task.taskName} <input type='button' value='Delete' class='deleteTask' onclick='deleteTask(this)'> </div>`;
   }
 
   // Insere no html
@@ -84,7 +84,7 @@ function cadastrar() {
 
 function deleteTask(e) {
   let div = e.parentElement;
-  let idElement = div.getAttribute("id");
+  let idElement = div.dataset.id; // usando data-set no lugar de getAttribute
   
   // Removendo do vetor
   for(task of allTasks) {
